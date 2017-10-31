@@ -1,0 +1,62 @@
+$background:#999;
+$gray-font:#999;
+$white-font:#fff;
+$black-font:#000;
+$s-text:12px;
+
+@mixin contentWidth($width){
+  width: $width;
+  margin: 1px auto;
+}
+
+@mixin sText(){
+  font-size: 12px;
+  line-height: 24px;
+}
+@mixin mText(){
+  font-size: 16px;
+  line-height: 32px;
+}
+@mixin lText(){
+  font-size: 20px;
+  line-height: 40px;
+}
+@mixin widthPosition($position,$zIndex){
+  width:100%;
+  height:500px;
+  position: $position;
+  z-index: $zIndex;
+}
+
+
+.personal-info{
+  @include widthPosition(relative,0);
+  background: $background;
+  .img-background{
+    @include widthPosition(absolute,1);
+    & img{
+      width:100%;
+    }
+  }
+  .transparent-black{
+    @include widthPosition(absolute,2);
+    background: rgba(0,0,0,0.2);
+  }
+}
+
+.summaries{
+  background: rgba(153,153,153,0.2);
+  @include contentWidth(90%);
+  margin-bottom: 15px;
+  .summary{
+    @include mText();
+    background: rgba(153,153,153,0.4);
+  }
+  .summary-time{
+    color: $gray-font;
+    @include sText();
+  }
+}
+
+
+
