@@ -50,8 +50,8 @@ log/
 Thumbs.db
 
 node
-node_modules
 *.log.*
+node_modules/*
 
 dist
 assets/*
