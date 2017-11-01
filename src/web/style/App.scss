@@ -1,5 +1,3 @@
-$login-page-bg: #333;
-
 $gray-font: #999;
 $white-font: #fff;
 $black-font: #475965;
@@ -8,6 +6,11 @@ $gray-background: #f0f3f6;
 $white-background: #fff;
 $blue-background: #21b8c6;
 
+@mixin background-image($url) {
+  background-image: $url;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
 @mixin contentWidth($width) {
   width: $width;
   margin: 1px auto;
@@ -33,7 +36,7 @@ $blue-background: #21b8c6;
 .login-page-bg {
   width: 100%;
   padding: 180px 0;
-  background: $login-page-bg no-repeat center;
+  @include background-image(url("images/login-bg.png"))
 
   .login-box {
     width: 420px;
@@ -41,10 +44,11 @@ $blue-background: #21b8c6;
     background: rgba(255, 255, 255, 0.85);
     border-radius: 6px;
     margin: 0 auto;
+    color: $black-font;
+    box-shadow: 0 0 20px #888 inset;
 
     .login-title {
       @include lText();
-      color: $black-font;
       text-align: center;
       font-weight: bold;
       margin-bottom: 40px;
@@ -65,7 +69,10 @@ $blue-background: #21b8c6;
         float: left;
       }
       .user-icon{
-        background: url("");
+        @include background-image(url("images/login-avatar.png"));
+      }
+      .password-icon{
+        @include background-image(url("images/login-password.png"));
       }
 
       .right-box {

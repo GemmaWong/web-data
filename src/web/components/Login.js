@@ -6,11 +6,11 @@ class Login extends React.Component {
             <div className="login-box">
                 <div className="login-title"> 登录</div>
                 <div className="login-line">
-                    < div className="left-box"> 用户名</div>
+                    < div className="left-box user-icon"></div>
                     < input className="right-box" type="text"/>
                 </div >
                 < div className="login-line">
-                    < div className="left-box"> 密码</ div >
+                    < div className="left-box password-icon"></ div >
                     < input className="right-box" type="password"/>
                 </div >
                 <input className="login-button" type="button" value="登录"/>
