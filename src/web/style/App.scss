@@ -1,49 +1,92 @@
-$login-page-bg:#aaa;
-$gray-font:#999;
-$white-font:#fff;
-$black-font:#000;
-$s-text:12px;
+$login-page-bg: #333;
 
-@mixin contentWidth($width){
+$gray-font: #999;
+$white-font: #fff;
+$black-font: #475965;
+
+$gray-background: #f0f3f6;
+$white-background: #fff;
+$blue-background: #21b8c6;
+
+@mixin contentWidth($width) {
   width: $width;
   margin: 1px auto;
 }
-
-@mixin sText(){
+@mixin sText() {
   font-size: 12px;
   line-height: 24px;
 }
-@mixin mText(){
+@mixin mText() {
   font-size: 16px;
   line-height: 32px;
 }
-@mixin lText(){
+@mixin lText() {
   font-size: 20px;
   line-height: 40px;
 }
-@mixin widthPosition($position,$zIndex){
-  width:100%;
-  height:500px;
+@mixin widthPosition($position,$zIndex) {
+  width: 100%;
+  height: 500px;
   position: $position;
   z-index: $zIndex;
 }
-
-.login-page-bg{
+.login-page-bg {
   width: 100%;
-  height: 975px;
+  padding: 180px 0;
   background: $login-page-bg no-repeat center;
-}
-.login-box{
-  width: 520px;
-  height: 540px;
-  background: rgba(255,255,255,0.85);
-  border-radius: 6px;
-  margin: 215px auto;
 
-  .transparent-black{
-    @include widthPosition(absolute,2);
-    background: rgba(0,0,0,0.2);
+  .login-box {
+    width: 420px;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 6px;
+    margin: 0 auto;
+
+    .login-title {
+      @include lText();
+      color: $black-font;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .login-line {
+      width: 415px;
+      height: 48px;
+      border: 1px solid #475965;
+      margin-bottom: 35px;
+
+      .left-box {
+        width: 80px;
+        height: 48px;
+        line-height: 48px;
+        text-align: center;
+        border-right: 1px solid #475965;
+        float: left;
+      }
+
+      .right-box {
+        width: 324px;
+        height: 46px;
+        padding-left: 10px;
+        line-height: 48px;
+        border: none;
+        background: none;
+        float: left;
+      }
+      .login-button {
+        width: 405px;
+        height: 48px;
+        line-height: 48px;
+        text-align: center;
+        border-radius: 6px;
+        border: none;
+        background: $blue-background;
+      }
+    }
   }
+
 }
+
 
 
