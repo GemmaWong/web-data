@@ -45,7 +45,7 @@ $blue-background: #21b8c6;
     border-radius: 6px;
     margin: 0 auto;
     color: $black-font;
-    box-shadow: 0 0 20px #888 inset;
+    box-shadow: 0 0 20px #555 inset;
 
     .login-title {
       @include lText();
