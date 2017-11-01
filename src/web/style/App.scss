@@ -64,6 +64,9 @@ $blue-background: #21b8c6;
         border-right: 1px solid #475965;
         float: left;
       }
+      .user-icon{
+        background: url("");
+      }
 
       .right-box {
         width: 324px;
@@ -74,15 +77,18 @@ $blue-background: #21b8c6;
         background: none;
         float: left;
       }
-      .login-button {
-        width: 405px;
-        height: 48px;
-        line-height: 48px;
-        text-align: center;
-        border-radius: 6px;
-        border: none;
-        background: $blue-background;
-      }
+    }
+    .login-button {
+      width: 415px;
+      height: 48px;
+      @include mText();
+      color: $white-font;
+      line-height: 48px;
+      text-align: center;
+      border-radius: 6px;
+      border: none;
+      background: $blue-background;
+      margin-bottom: 30px;
     }
   }
 
