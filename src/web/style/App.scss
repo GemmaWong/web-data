@@ -6,6 +6,13 @@ $gray-background: #f0f3f6;
 $white-background: #fff;
 $blue-background: #21b8c6;
 
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+
 @mixin background-image($url) {
   background-image: $url;
   background-repeat: no-repeat;
@@ -99,6 +106,60 @@ $blue-background: #21b8c6;
     }
   }
 
+}
+
+.user-page{
+  @include contentWidth(100%);
+
+  .header{
+    height: 50px;
+    padding: 50px 10px 10px 10px;
+    text-align: center;
+    color: $black-font;
+
+    .icon-text{
+      min-width: 50px;
+      padding-left: 40px;
+      padding-top: 10px;
+      margin-right: 30px;
+      @include mText();
+      color: $black-font;
+    }
+    .home-icon{
+      @include background-image(url("images/home.png"));
+      background-position: left bottom;
+      line-height: 24px;
+      font-weight: bold;
+    }
+    .identity-icon{
+      @include background-image(url("images/identity.png"));
+      background-position: left bottom;
+      line-height: 24px;
+    }
+    .site-icon{
+      @include background-image(url("images/site.png"));
+      background-position: left bottom;
+      line-height: 24px;
+      margin-right: 0;
+    }
+  }
+
+  .web-data{
+    @include contentWidth(100%);
+    .left{
+      width:20%;
+      min-height: 300px;
+    }
+    .center{
+      width:40%;
+      min-height: 300px;
+      background: $gray-background;
+    }
+    .right{
+      width:40%;
+      min-height: 300px;
+    }
+  }
 }
 
 
