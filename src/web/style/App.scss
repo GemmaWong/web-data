@@ -116,6 +116,7 @@ $blue-background: #21b8c6;
     padding: 50px 10px 10px 10px;
     text-align: center;
     color: $black-font;
+    border-bottom: 2px solid #f0f3f6;
 
     .icon-text{
       min-width: 50px;
@@ -140,6 +141,11 @@ $blue-background: #21b8c6;
       @include background-image(url("images/site.png"));
       background-position: left bottom;
       line-height: 24px;
+    }
+    .exit-icon{
+      @include background-image(url("images/site.png"));
+      background-position: left bottom;
+      line-height: 24px;
       margin-right: 0;
     }
   }
@@ -147,17 +153,32 @@ $blue-background: #21b8c6;
   .web-data{
     @include contentWidth(100%);
     .left{
-      width:20%;
+      width:15%;
       min-height: 300px;
-    }
-    .center{
-      width:40%;
-      min-height: 300px;
-      background: $gray-background;
     }
     .right{
-      width:40%;
+      width:85%;
       min-height: 300px;
+      position: relative;
+      .move-left,.move-right{
+        width: 50%;
+        min-height: 300px;
+        color: $black-font;
+        overflow: auto;
+      }
+      .move-left{
+        background: $gray-background;
+      }
+      #line {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        width: 2px;
+        overflow: hidden;
+        background: #e5e5e5;
+        cursor: w-resize;
+      }
     }
   }
 }
